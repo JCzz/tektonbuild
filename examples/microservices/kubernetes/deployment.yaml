@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: leeroy-web
-          image: gcr.io/appsyousee/leeroy-web
+          image: gcr.io/appsyouwear/leeroy-web
           ports:
             - containerPort: 8080

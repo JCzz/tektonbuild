@@ -5,21 +5,19 @@ metadata:
 spec:
   serviceAccountName: tutorial-service
   taskRef:
-    name: build-docker-image-from-git-source-task
+    name: build-docker-image-from-git-source
   inputs:
     resources:
       - name: docker-source
         resourceRef:
-          name: tektonbuild-git
+          name: skaffold-git
     params:
       - name: pathToDockerFile
         value: Dockerfile
       - name: pathToContext
-        value: /workspace/docker-source
-        #configure: may change according to your source
-        # Note the folder: /workspace/docker-source
+        value: /workspace/docker-source #configure: may change according to your source
   outputs:
     resources:
       - name: builtImage
         resourceRef:
-          name: tektonbuild-image
+          name: skaffold-image-leeroy-web

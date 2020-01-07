@@ -1,7 +1,7 @@
 apiVersion: tekton.dev/v1alpha1
 kind: PipelineResource
 metadata:
-  name: tektonbuild-image
+  name: skaffold-image-leeroy-web
 spec:
   type: image
   params:

@@ -1,7 +1,7 @@
-FROM golang:1.12
-WORKDIR /src/server
-# COPY go.mod go.sum ./
-# RUN go mod download
-# COPY . ./
+FROM golang:1.12.9-alpine3.10 as builder
+COPY web.go .
+RUN go build -o /web .
 
-# RUN go build -o ./app -v ./src/server
+FROM alpine:3.10
+CMD ["./web"]
+COPY --from=builder /web .

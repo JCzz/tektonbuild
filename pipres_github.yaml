@@ -8,4 +8,4 @@ spec:
     - name: revision
       value: master
     - name: url
-      value: https://github.com/appsyouwear/tektonbuild
+      value: https://github.com/JCzz/tektonbuild #configure: change if you want to build something else, perhaps from your own local git repository.
